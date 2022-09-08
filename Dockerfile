@@ -6,5 +6,5 @@ COPY . .
 RUN cargo install --path . --color always
 
 FROM ubuntu as runtime
-COPY --from=builder /usr/local/cargo/bin/compressor /usr/local/bin/compressor
-CMD ["compressor"]
+COPY --from=builder /usr/local/cargo/bin/compress /usr/local/bin/compress
+CMD ["compress"]
